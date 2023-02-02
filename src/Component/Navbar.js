@@ -18,7 +18,7 @@ function Navbar() {
   <h1 className="text-3xl active:text-gray-400 text-gray-500">Brand-V</h1>
     </div>
    <ul className="m-2">
-    <li className="text-gray-500 md:flex md:flex-row md:mr-0 mr-7  flex-col md:leading-none leading-6 pr-3">
+    <li className="text-gray-500 md:flex md:flex-row md:mr-0 mr-4  flex-col md:leading-none leading-6 pr-3">
     {content}
     </li>
    
