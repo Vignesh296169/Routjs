@@ -6,7 +6,7 @@ const response = [{ id: "p1", title: "FEATURES" },
   { id: "p4", title: "TESTIMONIALS" },
 ];
  const content = response.map((items)=>{
-  return <div key={items.id} className="md:mr-5 mr-2 hover:text-gray-400">{items.title}</div>
+  return <div key={items.id} className="md:mr-5 mr-1 hover:text-gray-400">{items.title}</div>
  })
 
 function Navbar() {
@@ -18,7 +18,7 @@ function Navbar() {
   <h1 className="text-3xl active:text-gray-400 text-gray-500">Brand-V</h1>
     </div>
    <ul className="m-2">
-    <li className="text-gray-500 md:flex md:flex-row md:mr-0 mr-4  flex-col md:leading-none leading-6 pr-3">
+    <li className="text-gray-500 md:flex md:flex-row md:mr-0 mr-2  flex-col md:leading-none leading-6 pr-3">
     {content}
     </li>
    
