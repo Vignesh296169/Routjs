@@ -1,11 +1,17 @@
-import Navbar from "./Component/Navbar";
-import Para from "./pages/Para";
+import Homecontent from "./pages/Homecontent";
+import Navpage from "./pages/Navpage"
+
 function App() {
 
-  return<section className="font-abc  ">
-     <Navbar/>
-      <Para/> 
-  </section>
+  return <div>
+    <Navpage/>
+  <Homecontent/>
+  </div>
+   
+      
+  
+
+  
     
  
 }

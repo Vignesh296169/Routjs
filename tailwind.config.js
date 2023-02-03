@@ -1,3 +1,5 @@
+// import pic from "./Assests/bg.jpg"
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
@@ -11,9 +13,15 @@ module.exports = {
       xl: '1280px',
       '2xl': '1536px',
     },
+    
     extend: {
+      backgroundImage: {
+        'pack-train': "url('./pages/unsplash.jpg')",
+      },
+    
       fontFamily: {
         abc: ["Open Sans", "sans-serif"],
+        landing:['Raleway', 'sans-serif']
       },
       container: {
         center: true,
