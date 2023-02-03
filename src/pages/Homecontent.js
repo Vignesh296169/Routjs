@@ -47,7 +47,7 @@ const parttwo =[
       </div>
       <div className=" px-2 py-4">
         <div className="grid grid-col-1 gap-4">
-        <h3 className=" text-xl font-semibold font-landing border-b-4 w-1/12  border-solid border-blue-600" >ABOUT US</h3>
+        <h3 className=" text-xl font-semibold font-landing border-b-4  md:w-1/12  border-solid border-blue-600" >ABOUT US</h3>
         <p className="font-light font-landing ">
           In exercitation aliquip commodo nostrud consectetur nostrud deserunt
           non veniam qui irure pariatur sint. Ipsum dolore cupidatat velit
