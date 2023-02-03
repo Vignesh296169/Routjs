@@ -1,11 +1,13 @@
 import Navbar from "./Component/Navbar";
-
+import Para from "./pages/Para";
 function App() {
-  return (
-    <div className='bg-[#AAE3E2] w-full h-screen'>
+
+  return<section className="font-abc  ">
      <Navbar/>
-    </div>
-  );
+      <Para/> 
+  </section>
+    
+ 
 }
 
 export default App;

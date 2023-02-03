@@ -1,28 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
-   
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+
   theme: {
-    fontFamily:{
-      "abc":['Open Sans', 'sans-serif']
-  },
+    // whenever you configure screen put out side of extend
     screens: {
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-
+      sm: '640px',
+      md: '750px',
+      lg: '1024px',
+      xl: '1280px',
       '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        abc: ["Open Sans", "sans-serif"],
+      },
+      container: {
+        center: true,
+        
+        // padding:"3rem"
+      },
+    },
   },
   plugins: [],
-}
+};
