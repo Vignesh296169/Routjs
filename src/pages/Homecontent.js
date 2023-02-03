@@ -60,7 +60,7 @@ const parttwo =[
         </p>
         <h4>Why Choose Us?</h4>
         </div>
-        <div className=" p-1 mt-1 grid grid-cols-2 gap-2">
+        <div className=" p-1 mt-2 grid grid-cols-2 gap-2">
          <div>
           {partone.map((items)=>{
            return <div key={items.id}><span className="rounded-md bg-blue-400 mr-2 text-sm text-blue-200">{items.id}</span>{items.title}</div>
