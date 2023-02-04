@@ -1,77 +1,50 @@
-import React, { useState, useEffect, useRef } from "react";
-import { BiListUl, BiX } from "react-icons/bi";
-import { NavLink } from "react-router-dom";
-import classNames from "classnames";
-export default function Navbar() {
-  const titles = [
-    { id: "p1", title: "HOME" },
-    { id: "p2", title: "FEATURES" },
-    { id: "p3", title: "SERVICE" },
-    { id: "p4", title: "TESTIMONIALS" },
-  ];
-  const [isopen, setopen] = useState(false);
-  useEffect(() => {
-    const handler = (e) => {
-      if (!reference.current.contains(e.target)) {
-        setopen(false);
-      }
-    };
-    document.addEventListener("click", handler);
-    return () => {
-      document.removeEventListener("click", handler);
-    };
-  }, []);
-  const reference = useRef();
-  // let icon=isopen ?  null  : <BiListUl/>
-  const handler = () => [setopen(!isopen)];
-const [currentid ,setid]=useState("p1")
-useEffect(()=>{
-  
-})
-  const classes=classNames ('',{
-  '/':currentid==="p1",
-  '/features':currentid==="p2",
-  '/service':currentid==="p3",
-  '/testimonials':currentid==="p4",
-  })
-  console.log(classes)
-
-  const idhandler=(id)=>{
-     setid(id)
-  }
-  
-console.log(classes);
+import React ,{useState}from "react";
+import { FaAngellist, FaAlignJustify } from "react-icons/fa";
+function Navbar() {
+  const [isopen,setopen]=useState(false)
   return (
-    <div className="relative">
-      const icon ={isopen ? <BiListUl /> : <BiX />}
-      <div
-        ref={reference}
-        className="w-full py-1 md:min-h-fit shadow-md flex justify-between fixed top-0  bg-slate-600 drop-shadow-md cursor-pointer md:items-center"
-      >
-        <div className="px-6 relative">
-          <div className="font-abc text-slate-300 font-bold text-3xl">
-            Brand
+    <div  >
+      <div className="border fixed w-screen opacity-90 bg-gray-700 border-zinc-900 md:flex md:justify-between md:leading-none leading-8 md:items-center cursor-default">
+        <div className="inline">
+          <div className="flex ml-2 items-center justify-between">
+            <span className="font-bold text-gray-500 text-2xl  p-2">
+              <FaAngellist />
+            </span>
+            <h1 className="text-4xl font-bold text-gray-400 font-landing px-1 py-1">
+              React-
+            </h1>
+            <span className="md:hidden px-2 text-2xl text-gray-500">
+                <FaAlignJustify onClick={()=>setopen(!isopen)} className="active:scale-75 active:text-slate-200"/>
+              </span>
           </div>
         </div>
-        <span className=" mr-3 text-3xl md:hidden">
-          {" "}
-          <BiListUl onClick={handler} className="active:scale-75" />
-        </span>
-
-        <ul
-          className={`flex ${
-            isopen ? "ml-0" : "ml-[-3000px]"
-          } md:z-0 z-[10] shadow-md duration-500 opacity-75 ease justify-center md:static md:mt-0 mt-10  md:flex-row flex-col absolute items-center md:bg-transparent bg-slate-400 md:w-fit w-full `}
-        >
-          {titles.map((list) => (
-            <li key={list.id} className="inline-block  md:mr-5" onClick={()=>idhandler(list.id)}>
-              <NavLink to={classes} className={(isActive)=>isActive ? "border-b-2 border-red-400":""}  end={true}>
-                {list.title}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+        <div className=" ">
+              </div>
+        <div className={`  `}>
+       
+          {/* srtgss */}
+          <div className={`border-t-2 md:border-t-0  md:static border-gray-300-700 md:block ${isopen ? "":"hidden"} `}>
+            
+            <ul className={`font-landing p-2 md:flex md:gap-4 text-gray-400 transition duration-200 ease-linear`}>
+              <li>
+                <a href="/" className="hover:text-gray-200">HOME</a>
+              </li>
+              <li>
+                <a href="/" className="hover:text-gray-200">FEATURES</a>
+              </li>
+              <li>
+                <a href="/" className="hover:text-gray-200">SERVICE</a>
+              </li>
+              <li>
+                <a href="/" className="hover:text-gray-200">TESTIMONIALS</a>
+              </li>
+            </ul>
+            {/* ddgsder */}
+          </div>
+        </div>
       </div>
     </div>
   );
 }
+
+export default Navbar;

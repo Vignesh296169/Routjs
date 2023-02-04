@@ -25,7 +25,7 @@ const parttwo =[
 
 ]
   return (
-    <div>
+    <div className="mt-12">
       <div className="bg-pack-train bg-no-repeat bg-cover bg-blend-darken">
         <div className="bg-gradient-to-tr from-black">
           <div className=" px-11 py-16 text-center grid place-content-center mt-2 text-slate-300">
