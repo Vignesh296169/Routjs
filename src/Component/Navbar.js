@@ -15,6 +15,7 @@ function Navbar() {
     document.removeEventListener("click",handler);
    }
   },[])
+  
   return (
     <div ref={reference} >
       <div className="border fixed w-screen shadow-lg opacity-90 bg-gray-700 border-zinc-900 md:flex md:justify-between md:leading-none leading-8 md:items-center cursor-default">
@@ -43,13 +44,13 @@ function Navbar() {
                 <NavLink to='/' className={({isActive})=>isActive ? "border-b-2 hover:text-slate-300 border-gray-200":undefined} end>HOME</NavLink>
               </li>
               <li>
-                <NavLink to='/features' className={({isActive})=>isActive ? "border-b-2 hover:text-slate-300 border-gray-200":undefined} end >FEATURES</NavLink>
+                <NavLink to='features' className={({isActive})=>isActive ? "border-b-2 hover:text-slate-300 border-gray-200":undefined} end >FEATURES</NavLink>
               </li>
               <li>
-                <NavLink to='/services' className={({isActive})=>isActive ? "border-b-2 hover:text-slate-300 border-gray-200":undefined} end>SERVICE</NavLink>
+                <NavLink to='services' className={({isActive})=>isActive ? "border-b-2 hover:text-slate-300 border-gray-200":undefined} end>SERVICE</NavLink>
               </li>
               <li>
-                <NavLink to='/testimonial' className={({isActive})=>isActive ? "border-b-2 hover:text-slate-300 border-gray-200":undefined} >TESTIMONIALS</NavLink>
+                <NavLink to='testimonial' className={({isActive})=>isActive ? "border-b-2 hover:text-slate-300 border-gray-200":undefined} >TESTIMONIALS</NavLink>
               </li>
             </ul>
             {/* ddgsder */}

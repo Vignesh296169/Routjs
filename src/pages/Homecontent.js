@@ -1,5 +1,6 @@
 import React from "react";
 // import images from "./unsplash.jpg"
+import { Link } from "react-router-dom";
 function Homecontent() {
   // const backgroundImagestyle={
   //     backgroundImage:`url{"${images}"}`,
@@ -24,6 +25,7 @@ const parttwo =[
 
 
 ]
+
   return (
     <div className="mt-12">
       <div className="bg-pack-train bg-no-repeat bg-cover bg-blend-darken">
@@ -39,7 +41,8 @@ const parttwo =[
                 incididunt. Pariatur in consequat adipisicing ad commodo.
               </p>
               <button className="font-light font-landing text-center border px-3 py-1 active:text-slate-500 active:skew-x-6 bg-gradient-to-tr rounded-lg from-cyan-500 to-indigo-700">
-                LEARN MORE
+                <Link to={`${"Path-Parameter"}`}>
+                LEARN MORE</Link>
               </button>
             </div>
           </div>
