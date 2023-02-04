@@ -1,10 +1,23 @@
-import React ,{useState}from "react";
+import React ,{useState,useRef,useEffect}from "react";
 import { FaAngellist, FaAlignJustify } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 function Navbar() {
   const [isopen,setopen]=useState(false)
+  const reference=useRef()
+  useEffect(()=>{
+   const handler =(e)=>{
+     if(!reference.current.contains(e.target)){
+      setopen(false)
+     }
+   }
+   document.addEventListener("click",handler);
+   return ()=>{
+    document.removeEventListener("click",handler);
+   }
+  },[])
   return (
-    <div  >
-      <div className="border fixed w-screen opacity-90 bg-gray-700 border-zinc-900 md:flex md:justify-between md:leading-none leading-8 md:items-center cursor-default">
+    <div ref={reference} >
+      <div className="border fixed w-screen shadow-lg opacity-90 bg-gray-700 border-zinc-900 md:flex md:justify-between md:leading-none leading-8 md:items-center cursor-default">
         <div className="inline">
           <div className="flex ml-2 items-center justify-between">
             <span className="font-bold text-gray-500 text-2xl  p-2">
@@ -27,16 +40,16 @@ function Navbar() {
             
             <ul className={`font-landing p-2 md:flex md:gap-4 text-gray-400 transition duration-200 ease-linear`}>
               <li>
-                <a href="/" className="hover:text-gray-200">HOME</a>
+                <NavLink to='/' className={({isActive})=>isActive ? "border-b-2 hover:text-slate-300 border-gray-200":undefined} end>HOME</NavLink>
               </li>
               <li>
-                <a href="/" className="hover:text-gray-200">FEATURES</a>
+                <NavLink to='/features' className={({isActive})=>isActive ? "border-b-2 hover:text-slate-300 border-gray-200":undefined} end >FEATURES</NavLink>
               </li>
               <li>
-                <a href="/" className="hover:text-gray-200">SERVICE</a>
+                <NavLink to='/services' className={({isActive})=>isActive ? "border-b-2 hover:text-slate-300 border-gray-200":undefined} end>SERVICE</NavLink>
               </li>
               <li>
-                <a href="/" className="hover:text-gray-200">TESTIMONIALS</a>
+                <NavLink to='/testimonial' className={({isActive})=>isActive ? "border-b-2 hover:text-slate-300 border-gray-200":undefined} >TESTIMONIALS</NavLink>
               </li>
             </ul>
             {/* ddgsder */}

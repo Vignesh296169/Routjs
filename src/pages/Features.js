@@ -2,7 +2,7 @@ import React from "react";
 import { GoBriefcase,GoBookmark } from "react-icons/go";
 function Features() {
   return (
-    <div className="px-2 py-3 ">
+    <div className="px-2 py-3 mt-14">
       <div className=" font-abc py-1 text-2xl inline-block border-b-2 border-solid border-blue-500">FEATURES</div>
       <div className=" mt-2 grid grid-cols-2 gap-8 text-center py-4">
         <div className="grid place-items-center">
